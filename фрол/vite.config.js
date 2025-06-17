@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()],
+  root: 'фрол/templates',           // корневая папка с main.html
+  build: {
+    rollupOptions: {
+      input: 'фрол/templates/main.html',  // входной html
+    }
+  }
 });
